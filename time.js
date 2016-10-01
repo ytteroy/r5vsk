@@ -37,12 +37,12 @@ function getNextRing(h,m, time){
 		var endTimeObject2 = new Date(startTimeObject);
 		endTimeObject2.setHours(h2, m2, 0);
 		
-		if((startTimeObject < endTimeObject) && ((weekday != 6) || (weekday !=7))){
+		if((startTimeObject < endTimeObject) && ((weekday != 6) && (weekday !=7))){
 			nextRing = test;
 			
 			$('#nextring').html(nextRing + " (sākas "+stundanr+")");
 			return false;
-		}else if((startTimeObject < endTimeObject2) && ((weekday != 6) || (weekday !=7))){
+		}else if((startTimeObject < endTimeObject2) && ((weekday != 6) && (weekday !=7))){
 			nextRing = test2;
 			
 			$(this).children('td').css("background-color", "#ececec");	// iekrāsojam stundu
